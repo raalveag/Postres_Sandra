@@ -1,0 +1,195 @@
+Styles.css
+/* Importar fuentes elegantes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fce8e9;
+    /* Fondo con patrón decorativo suave usando tonos rosa */
+    background-image: 
+        radial-gradient(#f19da8 1px, transparent 1px),
+        radial-gradient(#f3a5af 1px, #f3d2d4 1px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- ENCABEZADO Y LOGO --- */
+.brand-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.logo-icon {
+    font-size: 40px;
+    color: #e5828f;
+    margin-bottom: 5px;
+}
+
+.brand-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: #e5828f;
+    font-weight: 300;
+    line-height: 1.1;
+}
+
+.brand-subtitle {
+    color: #ad658d;
+    font-size: 0.95rem;
+    margin-top: 3px;
+}
+
+/* --- TARJETA PRINCIPAL --- */
+.login-card {
+    background-color: #fdf8fa;
+    width: 100%;
+    padding: 35px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.card-title {
+    color: #160e0d;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.card-subtitle {
+    color: #363433;
+    font-size: 0.88rem;
+    margin-bottom: 25px;
+}
+
+/* --- FORMULARIO --- */
+.login-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #695861;
+    margin-bottom: 8px;
+}
+
+/* Envoltorio de los inputs e iconos */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 12px 40px;
+    border: 1.5px solid #fda3b2;
+    border-radius: 8px;
+    background-color: #fff9f9;
+    font-size: 0.95rem;
+    color: #555;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-wrapper input:focus {
+    border-color: #e5828f;
+    box-shadow: 0 0 0 3px rgba(229, 130, 143, 0.2);
+}
+
+.input-wrapper input::placeholder {
+    color: #e49ea7;
+}
+
+.input-icon-left {
+    position: absolute;
+    left: 14px;
+    color: #e5828f;
+    font-size: 1rem;
+}
+
+.input-icon-right {
+    position: absolute;
+    right: 14px;
+    color: #a09595;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+/* --- BOTÓN INICIAR SESIÓN --- */
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: #f197a6;
+    color: #ebe6e7;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #d35d7a;
+}
+
+/* --- SECCIÓN DE REGISTRO --- */
+.register-section {
+    text-align: center;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.register-section p {
+    text-align: center;
+    color: #2b1f1d;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.btn-secondary {
+    display: inline-block;
+    text-align: center;
+    width: 60%;
+    padding: 10px;
+    background-color: #f197a6;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #d36472;
+}

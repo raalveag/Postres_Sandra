@@ -1,0 +1,44 @@
+body {
+    background-color: #a25bff; /* 19. Color en página */
+    background-image: url('Screenshot_20250505_093347_Chrome.jpg');
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px; /* 42. No tiene muchos espacios */
+}
+
+/* 8. Menú desplegable horizontal */
+.menu-horizontal {
+    background-color: #8B4513;
+    overflow: hidden;
+}
+.menu-horizontal a {
+    float: left;
+    color: rgb(255, 193, 168);
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.menu-horizontal a:hover { background-color: #D2691E; }
+
+/* 9. Menú desplegable vertical */
+.menu-vertical {
+    width: 200px;
+    background-color: #FFDAB9;
+}
+.menu-vertical a {
+    display: block;
+    color: rgb(0, 0, 0);
+    padding: 12px;
+    text-decoration: none;
+}
+
+h1 { color: #9a09fa; } /* 19. Color */
+hr { border: 1px solid #8B4513; } /* 17. Línea como separador */
+.negrita { font-weight: bold; } /* 18. Negrita */
+.cursiva { font-style: italic; } /* 18. Cursiva */
+.subrayado { text-decoration: underline; } /* 18. Subrayado */
+
+/* 14. Listas ordenadas y desordenadas */
+ol { list-style-type: decimal; }
+ul { list-style-type: square; } /* 16. Viñetas */
+/* 15. Listas con definición */
+dl dt { font-weight: bold; }

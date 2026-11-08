@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta - Repostería</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #b8a0f5, #e0c3fc);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            margin: 0;
+        }
+        .formulario {
+            background: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            width: 100%;
+            max-width: 420px;
+        }
+        h1 {
+            text-align: center;
+            color: #6b46c1;
+            margin-top: 0;
+        }
+        label {
+            display: block;
+            margin: 12px 0 5px;
+            font-weight: bold;
+            color: #444;
+        }
+        input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #d1c4e9;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px;
+            background: linear-gradient(90deg, #9f7aea, #b794f4);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background: linear-gradient(90deg, #805ad5, #9f7aea);
+        }
+        .mensaje {
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            display: none;
+        }
+        .exito {
+            background: #f0fff4;
+            color: #22543d;
+            border: 1px solid #9ae6b4;
+        }
+    </style>
+</head>
+<body>
+
+<div class="formulario">
+    <h1>🥐 Crear Cuenta</h1>
+
+    <form id="formRegistro">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Ingresa tu nombre" required>
+
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" placeholder="Ingresa tu usuario" required>
+
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" placeholder="ejemplo@correo.com" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" placeholder="Ingresa tu teléfono" required>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" placeholder="Ingresa tu dirección" required>
+
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" placeholder="Crea una contraseña" required>
+
+        <label for="fecha">Fecha de Registro:</label>
+        <input type="date" id="fecha">
+
+        <button type="submit">Crear Cuenta</button>
+    </form>
+
+    <div id="mensajeExito" class="mensaje exito">
+        ✅ ¡Cuenta creada con éxito!
+    </div>
+</div>
+
+<script>
+const form = document.getElementById('formRegistro');
+
+// Poner fecha de hoy automáticamente
+const hoy = new Date();
+const fechaFormato = hoy.toISOString().split('T')[0];
+document.getElementById('fecha').value = fechaFormato;
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault(); // No recargar página
+
+    // Tomar datos del formulario
+    const datos = {
+        nombre: document.getElementById('nombre').value,
+        usuario: document.getElementById('usuario').value,
+        correo: document.getElementById('correo').value,
+        telefono: document.getElementById('telefono').value,
+        direccion: document.getElementById('direccion').value,
+        contrasena: document.getElementById('contrasena').value,
+        fecha: document.getElementById('fecha').value
+    };
+
+    // Guardar en el navegador (NO necesita base de datos)
+    localStorage.setItem('usuarioReposteria', JSON.stringify(datos));
+
+    // Mostrar confirmación
+    document.getElementById('mensajeExito').style.display = 'block';
+    
+    // Limpiar formulario
+    form.reset();
+    document.getElementById('fecha').value = fechaFormato;
+
+    // Opcional: ir a página de inicio después de 2 segundos
+    // setTimeout(() => { window.location.href = 'menu.html'; }, 2000);
+});
+</script>
+
+</body>
+</html>

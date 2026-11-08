@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anhelo — Nosotros</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+        body {
+            background: linear-gradient(180deg, #FFF8FC 0%, #FFEFF7 30%, #FFE5F2 60%, #FFD9EC 100%);
+            color: #5C2E45;
+            line-height: 1.8;
+            position: relative;
+            overflow-x: hidden;
+        }
+        /* ✨ Partículas brillantes flotando */
+        .brillo {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: #FFE0F0;
+            border-radius: 50%;
+            box-shadow: 0 0 10px 4px rgba(255, 130, 190, 0.25);
+            animation: flotar 8s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+        @keyframes flotar {
+            0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.3; }
+            50% { transform: translateY(-40px) rotate(180deg); opacity: 0.8; }
+        }
+        /* 🌸 Adornos decorativos de fondo */
+        .adorno-flores {
+            position: absolute;
+            font-size: 10rem;
+            color: rgba(255, 150, 200, 0.06);
+            z-index: 0;
+            pointer-events: none;
+        }
+        .flor1 { top: 60px; right: 40px; }
+        .flor2 { bottom: 80px; left: 30px; }
+        .flor3 { top: 40%; left: 5%; font-size: 7rem; }
+
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; border-radius: 24px; }
+
+        /* Sección principal */
+        .nosotros {
+            padding: 5rem 6%;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 🌸 Título súper elegante */
+        .titulo-seccion {
+            text-align: center;
+            margin-bottom: 5rem;
+            position: relative;
+        }
+        .titulo-seccion .decoracion {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .titulo-seccion .raya {
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #FF85B8, transparent);
+        }
+        .titulo-seccion .flor-icono {
+            font-size: 2rem;
+            animation: latido 2s ease-in-out infinite;
+        }
+        @keyframes latido {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+        .titulo-seccion h1 {
+            font-size: 4.2rem;
+            background: linear-gradient(90deg, #992E66, #D63384, #FF66A8, #D63384, #992E66);
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: brilloTexto 4s ease infinite;
+            letter-spacing: 3px;
+            margin-bottom: 0.8rem;
+            filter: drop-shadow(0 4px 12px rgba(214, 51, 132, 0.15));
+        }
+        @keyframes brilloTexto {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .subtitulo {
+            font-size: 1.3rem;
+            color: #A04575;
+            font-style: italic;
+            padding: 0.7rem 2rem;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 50px;
+            display: inline-block;
+            box-shadow: 0 6px 20px rgba(255, 120, 180, 0.12);
+            border: 1px solid rgba(255, 160, 210, 0.4);
+        }
+
+        /* 💖 Caja principal con marco brillante */
+        .contenido-principal {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4.5rem;
+            align-items: center;
+            margin-bottom: 6.5rem;
+            background: linear-gradient(135deg, rgba(255,255,255,0.85), rgba(255,240,248,0.75));
+            padding: 3.5rem;
+            border-radius: 32px;
+            position: relative;
+            box-shadow: 
+                0 15px 40px rgba(200, 80, 140, 0.12),
+                inset 0 0 0 1px rgba(255, 180, 220, 0.5);
+            overflow: hidden;
+        }
+        .contenido-principal::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #FFB3D6, #FF85B8, #E868A8, #FFB3D6);
+            background-size: 400% 400%;
+            border-radius: 34px;
+            z-index: -1;
+            opacity: 0.6;
+            animation: bordeBrillante 6s ease infinite;
+        }
+        @keyframes bordeBrillante {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .texto h2 {
+            font-size: 2rem;
+            color: #8C2E5F;
+            margin-bottom: 2rem;
+            line-height: 1.4;
+            position: relative;
+            display: inline-block;
+        }
+        .texto h2::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(90deg, rgba(255,130,190,0.35), rgba(255,130,190,0.1));
+            border-radius: 4px;
+            z-index: -1;
+        }
+        .texto p {
+            color: #6E3050;
+            margin-bottom: 1.5rem;
+            font-size: 1.08rem;
+            line-height: 1.9;
+            text-align: justify;
+        }
+
+        /* 🏷️ Etiquetas hermosas con efecto cristal */
+        .etiquetas {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+            flex-wrap: wrap;
+        }
+        .etiqueta {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #702850;
+            font-size: 1rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #FFEAF6, #FFD4E8);
+            padding: 0.7rem 1.6rem;
+            border-radius: 50px;
+            box-shadow: 
+                0 6px 16px rgba(217, 80, 145, 0.15),
+                inset 0 1px 0 rgba(255,255,255,0.9);
+            border: 1px solid rgba(255, 180, 220, 0.6);
+            transition: all 0.4s ease;
+            cursor: default;
+        }
+        .etiqueta:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(217, 80, 145, 0.25);
+            background: linear-gradient(135deg, #FFDFF2, #FFC9E3);
+        }
+
+        /* 🖼️ Imagen con marco decorativo */
+        .imagen-principal {
+            position: relative;
+        }
+        .imagen-principal::before,
+        .imagen-principal::after {
+            content: '';
+            position: absolute;
+            border-radius: 26px;
+            z-index: -1;
+        }
+        .imagen-principal::before {
+            top: -15px;
+            left: -15px;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #FF85B8, #E868A8);
+            opacity: 0.4;
+        }
+        .imagen-principal::after {
+            bottom: -10px;
+            right: -10px;
+            width: 85%;
+            height: 85%;
+            background: linear-gradient(45deg, #FFB3D6, #FF94C8);
+            opacity: 0.25;
+        }
+        .imagen-principal img {
+            width: 100%;
+            height: auto;
+            box-shadow: 0 18px 45px rgba(180, 60, 120, 0.25);
+            transition: all 0.6s ease;
+        }
+        .imagen-principal img:hover {
+            transform: scale(1.05) rotate(1.5deg);
+            box-shadow: 0 22px 55px rgba(214, 51, 132, 0.32);
+        }
+
+        /* 💎 Tarjetas de valores preciosas */
+        .valores {
+            margin-top: 6rem;
+            position: relative;
+        }
+        .valores h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #992E66, #D63384, #FF66A8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 3.5rem;
+            position: relative;
+        }
+        .valores h2 span {
+            display: inline-block;
+            position: relative;
+        }
+        .valores h2 span::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 10%;
+            width: 80%;
+            height: 8px;
+            background: linear-gradient(90deg, rgba(255,102,168,0.3), rgba(214,51,132,0.15));
+            border-radius: 4px;
+            z-index: -1;
+        }
+        .tarjetas-valores {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.8rem;
+        }
+        .tarjeta {
+            background: linear-gradient(160deg, #FFEAF6, #FFD9EE);
+            padding: 2.6rem;
+            border-radius: 26px;
+            position: relative;
+            box-shadow: 
+                0 12px 30px rgba(180, 60, 120, 0.12),
+                inset 0 2px 0 rgba(255,255,255,0.9);
+            border: 1px solid rgba(255, 170, 215, 0.5);
+            overflow: hidden;
+            transition: all 0.5s ease;
+        }
+        .tarjeta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, #FF94C8, #FF66A8, #D63384, #B82E70, #D63384, #FF66A8, #FF94C8);
+            background-size: 200% 100%;
+            animation: barraBrillante 4s linear infinite;
+        }
+        @keyframes barraBrillante {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+        .tarjeta::after {
+            content: '✿';
+            position: absolute;
+            bottom: -15px;
+            right: 15px;
+            font-size: 5rem;
+            color: rgba(255, 150, 200, 0.12);
+            pointer-events: none;
+        }
+        .tarjeta:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 20px 45px rgba(214, 51, 132, 0.22);
+        }
+        .tarjeta h3 {
+            color: #992E66;
+            font-size: 1.45rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .tarjeta p {
+            color: #6E3050;
+            font-size: 1.03rem;
+            line-height: 1.8;
+        }
+
+        /* 🎀 Botones de Navegación */
+        .navegacion {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 5rem;
+            padding: 0 2rem;
+        }
+        .btn-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #FFEAF6, #FFD4E8);
+            color: #802F5C;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            box-shadow: 
+                0 6px 18px rgba(217, 80, 145, 0.18),
+                inset 0 1px 0 rgba(255,255,255,0.9);
+            border: 2px solid rgba(255, 170, 215, 0.6);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+        .btn-nav:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 28px rgba(217, 80, 145, 0.28);
+            background: linear-gradient(135deg, #FFDFF2, #FFC9E3);
+            border-color: rgba(255, 140, 200, 0.8);
+        }
+        .btn-nav:active {
+            transform: translateY(0);
+        }
+        .btn-siguiente {
+            flex-direction: row-reverse;
+        }
+
+        /* 📱 Responsividad */
+        @media (max-width: 960px) {
+            .contenido-principal {
+                grid-template-columns: 1fr;
+                padding: 2.5rem;
+            }
+            .tarjetas-valores {
+                grid-template-columns: 1fr;
+            }
+            .titulo-seccion h1 {
+                font-size: 2.8rem;
+            }
+            .navegacion {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ✨ Brillitos flotantes -->
+    <div class="brillo" style="top: 15%; left: 8%; animation-delay: 0s;"></div>
+    <div class="brillo" style="top: 25%; right: 12%; animation-delay: 1.5s;"></div>
+    <div class="brillo" style="top: 55%; left: 5%; animation-delay: 3s;"></div>
+    <div class="brillo" style="top: 75%; right: 8%; animation-delay: 4.5s;"></div>
+    <div class="brillo" style="top: 40%; right: 20%; animation-delay: 6s;"></div>
+
+    <!-- 🌸 Adornos florales de fondo -->
+    <div class="adorno-flores flor1">✿</div>
+    <div class="adorno-flores flor2">❀</div>
+    <div class="adorno-flores flor3">✽</div>
+
+    <!-- Sección Nosotros -->
+    <section class="nosotros">
+        <div class="titulo-seccion">
+            <div class="decoracion">
+                <span class="raya"></span>
+                <span class="flor-icono">🌸</span>
+                <span class="raya"></span>
+            </div>
+            <h1>Nuestra Historia</h1>
+            <p class="subtitulo">🍰 Repostería artesanal desde 2018 • Hecho con amor en cada horneada</p>
+        </div>
+
+        <div class="contenido-principal">
+            <div class="texto">
+                <h2>🥐 Horneamos con tradición y cariño</h2>
+                <p>En Anhelo creemos que la repostería es más que dulces: es memoria, encuentro y dedicación. Desde nuestro primer pan de masa madre en un pequeño horno familiar, nos dedicamos a crear cada pieza de forma artesanal, usando ingredientes locales y técnicas tradicionales que respetan el tiempo y la calidad.</p>
+                <p>Cada día nuestro equipo amasa, fermenta y hornea para llevar a tu mesa sabores honestos, inspirados en recetas que han pasado de generación en generación, conservando ese sabor que enamora desde el primer bocado.</p>
+                <p>Nuestra promesa es simple: ingredientes reales, procesos cuidadosos y un trato cercano. Valoramos lo hecho a mano, el sabor auténtico y el cuidado en cada detalle — desde el croissant hojaldrado hasta el pan de masa madre de corteza dorada. En Anhelo, cada hornada es un anhelo cumplido: el de compartir momentos dulces alrededor de la mesa.</p>
+                <div class="etiquetas">
+                    <span class="etiqueta">🌾 Ingredientes locales</span>
+                    <span class="etiqueta">💛 Elaboración artesanal</span>
+                </div>
+            </div>
+            <div class="imagen-principal">
+                <img src="panaderia.jpg" alt="Equipo de Anhelo amasando con cariño">
+            </div>
+        </div>
+
+        <!-- 💎 Valores -->
+        <div class="valores">
+            <h2><span>✨ Nuestros Valores</span></h2>
+            <div class="tarjetas-valores">
+                <div class="tarjeta">
+                    <h3>🌿 Calidad Premium</h3>
+                    <p>Materias primas seleccionadas, sin conservantes ni aditivos. Solo lo natural y puro, tal como debe ser, cuidando cada detalle para ti y los tuyos.</p>
+                </div>
+                <div class="tarjeta">
+                    <h3>📜 Tradición Viva</h3>
+                    <p>Técnicas artesanales y fermentación natural. Recetas que honran el tiempo y la experiencia de generaciones enteras con amor y dedicación.</p>
+                </div>
+                <div class="tarjeta">
+                    <h3>🤝 Corazón Comunitario</h3>
+                    <p>Apoyamos a productores locales y horneamos para compartir. Sabor que une corazones, familias y amigos en cada momento dulce.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 🎀 Botones de Navegación -->
+        <div class="navegacion">
+            <a href="menu.php" class="btn-nav btn-anterior">
+                ← Anterior
+            </a>
+            <a href="contacto.php" class="btn-nav btn-siguiente">
+                Siguiente →
+            </a>
+        </div>
+    </section>
+</body>
+</html>

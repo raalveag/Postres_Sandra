@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Postres Sandra - Deliciosos postres</title>
+    <style>
+        body {
+      background-color: #cda6ff; /* 🔹 19. Color en página */
+      background-image: url('Screenshot_20250505_094353_Chrome.jpg');
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+        }
+
+        /* 🔹 9. MENÚ VERTICAL (AHORA ES EL PRINCIPAL) */
+        .contenedor-principal {
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+            max-width: 1100px;
+            margin: auto;
+        }
+        .menu-vertical {
+            background-color: #6f42c1;
+            padding: 20px 12px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            min-width: 180px;
+            position: sticky;
+            top: 20px;
+        }
+        .menu-vertical a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 14px 16px;
+            margin: 8px 0;
+            border-radius: 6px;
+            transition: background 0.3s;
+            text-align: center;
+        }
+        .menu-vertical a:hover {
+            background-color: #9067e0;
+        }
+
+        .contenido {
+            background-color: #f6e0ff;
+            flex: 1;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(120, 20, 120, 0.3);
+        }
+        h1 {
+            color: #b84cb8;
+            text-align: center;
+            font-size: 28px;
+        }
+        h2 {
+            color: #d645d6;
+            font-size: 22px;
+            border-bottom: 2px solid #ec58ec;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #c950c9;
+            font-size: 18px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        .destacado {
+            background-color: #ed90ff;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-align: center;
+        }
+        img {
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        /* 🔹 20. Botón regresar */
+        .boton-regresar {
+            display: inline-block;
+            background-color: #6f42c1;
+            color: white;
+            padding: 10px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .boton-regresar:hover { background: #9067e0; }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor-principal">
+        <!-- 🔹 9. MENÚ VERTICAL PRINCIPAL -->
+        <div class="menu-vertical">
+            <a href="menu.php">🏠 Inicio</a>
+            <a href="clientes.php">👥 Clientes</a>
+            <a href="productos.php">🍰 Productos</a>
+            <a href="pedido.php">📦 Pedidos</a>
+            <a href="empresa.php">🏢 Empresa</a>
+            <a href="proveedor.php">🚚 Proveedores</a>
+        </div>
+
+
+        <div class="contenido">
+            <!-- 🔹 11. Enlace para regresar al menú -->
+            <p style="text-align:right; margin-top:0;">
+                <a href="menu.php" style="color:#6f42c1; font-weight:bold;">↩️ Regresar al menú principal</a>
+            </p>
+
+            <h1> Postres Sandra - Los más deliciosos y caseros</h1>
+
+            <h2>Deliciosos postres para comer en familia, amigos y en cualquier ocasión especial</h2>
+
+            <!-- 🔹 18. Etiquetas: párrafo, negrita, cursiva, subrayado -->
+            <div class="destacado">
+                ¡¡¡DONDE TODOS LOS POSTRES SON <strong>DELICIOSOS</strong>, <em>FRESCOS</em> Y <u>HECHOS CON MUCHO AMOR</u>!!! 
+                <br><br>
+                Los postres están hechos con <strong>cariño</strong>, <em>dedicación</em>, los mejores ingredientes y también son muy deliciosos, siempre cuidando cada detalle para que al probarlos sientas todo el sabor y la calidad que nos caracteriza.
+            </div>
+
+            <br><br>
+
+            <center>
+                <img src="images (17).jpeg" alt="Variedad de postres exquisitos" align="center" width="500">
+            </center>
+
+
+            <!-- 🔹 12. Descripción del proyecto -->
+            <h2>📋 ¿De qué trata este proyecto?</h2>
+            <p>
+                Este proyecto web llamado <strong>Postres Sandra</strong> es un sistema completo para administrar todo lo relacionado con el negocio de repostería: 
+                <em>registro de clientes</em>, control de <u>pedidos</u>, gestión de <strong>productos</strong>, datos de la empresa y relación con proveedores. Todo está conectado a una base de datos para mantener la información segura, organizada y siempre actualizada.
+            </p>
+
+            <!-- 🔹 17. Línea como separador -->
+            <hr style="border: 2px solid #ec58ec; border-radius: 5px; margin: 25px 0;">
+
+
+            <!-- 🔹 13. Listas y sublistas ordenadas -->
+            <h3>📌 Principales funciones</h3>
+            <ol>
+                <li>Gestión de Clientes
+                    <ol type="a">
+                        <li>Agregar nuevos registros</li>
+                        <li>Modificar datos existentes</li>
+                        <li>Eliminar clientes antiguos</li>
+                    </ol>
+                </li>
+                <li>Catálogo de Productos
+                    <ol type="a">
+                        <li>Clasificación por categorías</li>
+                        <li>Imágenes y descripciones</li>
+                        <li>Precios actualizados</li>
+                    </ol>
+                </li>
+                <li>Procesamiento de Pedidos
+                    <ol type="a">
+                        <li>Crear pedidos nuevos</li>
+                        <li>Ver historial de compras</li>
+                    </ol>
+                </li>
+            </ol>
+
+
+            <!-- 🔹 14. Listas ordenadas y desordenadas -->
+            <h3>✅ Ventajas del sistema</h3>
+            <ul>
+                <li>Rápido y fácil de usar</li>
+                <li>Diseño limpio y agradable</li>
+                <li>Información siempre disponible</li>
+            </ul>
+            <ol start="4">
+                <li>Acceso desde cualquier lugar</li>
+                <li>Colores que facilitan la lectura</li>
+            </ol>
+
+
+            <!-- 🔹 15. Listas con definición -->
+            <h3>📘 Conceptos clave</h3>
+            <dl>
+                <dt><strong>Cliente</strong></dt>
+                <dd>Persona que elige y compra nuestros postres.</dd>
+
+                <dt><strong>Producto</strong></dt>
+                <dd>Cada delicia elaborada artesanalmente con amor.</dd>
+
+                <dt><strong>Pedido</strong></dt>
+                <dd>Solicitud formal de productos para entregar.</dd>
+            </dl>
+
+
+            <!-- 🔹 16. Listas con viñetas -->
+            <h3>🎯 Valores que nos distinguen</h3>
+            <ul style="list-style-type: square; color:#800080;">
+                <li>Calidad superior garantizada</li>
+                <li>Frescura en cada preparación</li>
+                <li>Atención cálida y amable</li>
+                <li>Higiene y limpieza total</li>
+            </ul>
+
+
+            <h2>Nuestra Historia y Tradición</h2>
+            <p>
+                Todo comenzó hace ya varios años, como un pequeño pasatiempo y una gran pasión por la repostería. Lo que empezó preparando cosas ricas solo para la familia y vecinos, poco a poco fue creciendo gracias a que todo lo que hacíamos gustaba muchísimo, por su sabor auténtico, por ser tan casero y por la forma tan cuidadosa en la que se preparaba cada cosa.
+            </p>
+            <p>
+                Con el paso del tiempo, fuimos aprendiendo, mejorando recetas, creando nuestras propias combinaciones y logrando sabores únicos que hoy nos distinguen. Así nació oficialmente <strong>Postres Sandra</strong>, con el sueño y objetivo de poder llevar alegría, dulzura y momentos muy felices a la mesa de todas las personas que nos prefieren y confían en nosotros. Nuestra mayor satisfacción es ver la cara de gusto de cada cliente cuando prueba nuestros productos, saber que quedan contentos y que siempre vuelven, incluso que nos recomiendan con más gente. Esa es nuestra mejor recompensa.
+            </p>
+            <p>
+                Actualmente nos hemos convertido en uno de los negocios más queridos y reconocidos de la zona, sin dejar nunca de ser lo que somos: un lugar donde todo se hace como en casa, con mucho esmero, higiene total y sobre todo muchísimo cariño, porque creemos firmemente que ese es el ingrediente principal que hace que todo sepa increíblemente bien.
+            </p>
+
+
+            <h2>¿Qué nos hace ser diferentes y especiales?</h2>
+            <p>
+                En Postres Sandra tenemos siempre muy claras nuestras reglas y valores, cosas que jamás cambiamos y que son lo más importante para nosotros:
+            </p>
+            <ul>
+                <li><strong>Ingredientes de primera calidad:</strong> Nunca utilizamos cosas de <mark><i>baja calidad</i></mark>, buscamos siempre lo mejor, lo más fresco y lo más natural posible, porque sabemos que eso se nota totalmente en el sabor, en la textura y también en la calidad nutricional de lo que comemos. Trabajamos con proveedores de mucha confianza, con quienes llevamos años trabajando, para asegurarnos que todo lo que entra a nuestra cocina sea excelente.</li>
+
+                <li><strong>Recetas tradicionales y propias:</strong> Tenemos todas esas <i>recetas clásicas</i> que nunca fallan y que a todos les encantan, esas que se han usado por generaciones y que son parte de la repostería clásica, pero también creamos nuestras propias versiones, mezclamos sabores, probamos nuevas combinaciones y creamos cosas totalmente nuevas y únicas que solo podrás encontrar aquí con nosotros.</li>
+
+                <li><strong>Preparación totalmente artesanal:</strong> Aunque ya somos más grandes, seguimos preparando todo a mano, paso a paso, tal como se hacía antes. No usamos masas prefabricadas ni mezclas industriales, todo se hace desde cero, empezando por hacer las masas, los rellenos, las cremas, las coberturas, absolutamente todo, lo cual da ese sabor auténtico que nos caracteriza y que es imposible de imitar.</li>
+
+                <li><strong>Variedad para todos los gustos:</strong> Sabemos perfectamente que cada persona tiene gustos distintos, por eso tenemos una carta enorme de opciones: cosas con fruta fresca, con chocolate de todos los tipos, cremosos, esponjosos, secos, ligeros o más sustanciosos, hay para quienes les gusta lo muy dulce, para quienes prefieren algo más suave, incluso opciones con menos azúcar o adaptadas para necesidades especiales. No importa qué te guste, aquí seguro encuentras algo que te va a encantar.</li>
+
+                <li><strong>Frescura garantizada:</strong> Cada día <i>horneamos y preparamos</i> justo lo necesario, nada se hace con demasiada anticipación, todo lo que vendemos fue hecho máximo ese mismo día o el día anterior, para asegurar que cuando llegue a tus manos esté fresco, suave, rico y en su mejor punto de consumo, como si lo acabaras de sacar del horno tú mismo.</li>
+            </ul>
+
+
+            <h2>Lista completa de nuestros productos más pedidos</h2>
+            <p>Tenemos muchísimas opciones, pero estos son los que más nos piden y los famosos de la casa, los que ya son clásicos y obligados cuando nos visitan:</p>
+
+            <h3>🔹 Pasteles y Tortas</h3>
+            <p>
+                Tenemos de todos los tamaños: desde pequeñitos para comer solo o compartir entre dos personas, medianos ideales para reuniones chicas o familia pequeña, hasta grandes y gigantes, perfectos para fiestas, cumpleaños, celebraciones grandes o eventos donde van muchas personas. Los hacemos de cualquier sabor y combinación: vainilla, chocolate, nuez, coco, fresa, piña, lechosa, con rellenos de crema, fruta, dulce de leche, mermeladas caseras, lo que tú quieras. También los decoramos totalmente a tu gusto, con escritos, figuras, colores, temas, lo que imagines lo podemos hacer realidad.
+            </p>
+            <center>
+                <img src="images (14).jpeg" alt="Variedad de postres exquisitos" align="center" width="500">
+            </center>
+
+
+
+            <h3>🔹 Postres individuales y porciones</h3>
+            <p>
+                Perfectos para darse un gustito, para el postre de la comida o cena, para llevar al trabajo o escuela, o simplemente cuando tienes antojo de algo rico pero no quieres comprar algo muy grande. Tenemos: flanes de varios sabores, arroz con leche, natillas, gelatina con trocitos de fruta, chajá, mousses, cremas volteadas, bizcochuelos rellenos, tartaletas, empanaditas dulces y muchísimas cosas más, siempre muy bien servidos, con mucha generosidad y buen sabor.
+            </p>
+             <center>
+                <img src="Delicias postres.jpg" alt="Variedad de postres exquisitos" align="center" width="500">
+            </center>
+
+            <h3> Galletas, panes dulces y bocaditos</h3>
+            <p>
+                Ideales para acompañar un café, un té, un chocolate caliente o para comer en cualquier momento del día. Hechas con harinas seleccionadas, mantequilla real, huevos frescos y todo natural. Tenemos galletas suaves, crujientes, con trocitos de chocolate, con frutos secos, de coco, de almendra, de avena, también panes dulces de muchas formas y tamaños, rellenos o simples, todos muy ricos y esponjosos.
+            </p>
+             <center>
+                <img src="Screenshot_20250505_093226_Chrome.jpg" alt="Variedad de postres exquisitos" align="center" width="500">
+            </center>
+
+            <h3> Pedidos especiales y personalizados</h3>
+            <p>
+                ¿Tienes algo en mente que no ves aquí? No hay problema, ¡lo hacemos! Aceptamos pedidos totalmente hechos a medida. Si necesitas algo para una fiesta temática, para un evento corporativo, para regalar, para una fecha importante, o si simplemente quieres que preparemos una receta especial o antigua que te gusta mucho, solo tienes que decírnoslo, comentarnos todos los detalles y nosotros nos encargamos de hacerlo realidad, con toda la calidad y dedicación de siempre. Trabajamos así hace mucho tiempo y nos encanta porque es una forma de crear cosas únicas y especiales para cada persona.
+            </p>
+
+            <center>
+                <img src="Screenshot_20250505_093604_Chrome.jpg" alt="Variedad de postres exquisitos" align="center" width="500">
+            </center>
+
+            <h2> ¿Dónde estamos y cómo puedes comprar?</h2>
+            <p>
+                Nuestro local principal está ubicado en una zona muy accesible y conocida, con instalaciones muy cómodas, limpias, bonitas y agradables para que puedas pasar, ver todo lo que tenemos, elegir con calma y llevarte lo que más te guste. Contamos con mostrador amplio donde siempre tenemos gran variedad ya listo para llevar, así que casi siempre puedes llevarte tu compra en ese mismo momento sin esperas.
+            </p>
+            <p>
+                También contamos con servicio de pedidos por encargo, por si necesitas algo muy grande, mucha cantidad, algo especial o que hagamos algo que no tenemos a la vista, basta con avisarnos con al menos uno o dos días de anticipación, dependiendo de lo que sea, y te lo tenemos listo justo cuando lo necesites, listo para pasar a recogerlo.
+            </p>
+            <p>
+                Hacemos entregas a domicilio dentro de cierta zona de la ciudad, así que si no puedes venir <i><mark>personalmente</mark></i>, te llevamos tu pedido hasta la puerta de tu casa u oficina, con toda seguridad y cuidado para que llegue intacto y en perfecto estado. Pregunta por el costo y alcance de este servicio, nos adaptamos siempre para darte las mayores facilidades posibles.
+            </p>
+            <p>
+                Comprar aquí es súper fácil, cómodo y seguro. Tenemos precios muy justos, accesibles para todos, pensados para que calidad y buen precio vayan siempre juntos, no es necesario gastar demasiado para comer cosas realmente ricas y de calidad excelente, esa ha sido siempre nuestra filosofía y forma de trabajar. Aceptamos varias formas de pago para que te sea más sencillo aún hacer tus compras.
+            </p>
+
+
+            <h2> Compromiso y agradecimiento</h2>
+            <p>
+                Para nosotros cada cliente es mucho más que una venta, son personas que nos dan su <mark>confianza</mark>, su preferencia y su apoyo, cosas que valoramos inmensamente y que nos hacen seguir esforzándonos cada día para ser mejores, para dar más calidad, mejor servicio y más cosas ricas. Sabemos que sin ustedes nada de esto sería posible, por eso damos gracias de corazón a todos los que han estado con nosotros desde el principio, a quienes se van sumando ahora y a todos los que nos recomiendan y nos ayudan a crecer.
+            </p>
+            <p>
+                Nos comprometemos formalmente a mantener siempre nuestros estándares altos, a cuidar cada detalle, a innovar, a conservar nuestra esencia y a dar siempre lo mejor de nosotros mismos en todo lo que hagamos. Queremos estar aquí por muchísimos años más, siendo parte de sus vidas, de sus celebraciones y de sus momentos dulces y felices.
+            </p>
+            <p style="text-align:center; font-weight:bold; font-size:17px;">
+                ¡Gracias por visitarnos y esperamos verte muy pronto! 
+            </p>
+
+            <!-- 🔹 20. Botón para regresar al menú -->
+            <center>
+                <a href="menu.php" class="boton-regresar">🔙 REGRESAR AL MENÚ</a>
+            </center>
+
+            <br>
+            <center>
+                <a href="pedido.php" style="background:#ec58ec; color:white; padding:12px 25px; border-radius:8px; text-decoration:none; font-weight:bold; font-size:16px;">🛒 IR A REALIZAR PEDIDO</a>
+            </center>
+
+        </div>
+    </div>
+
+</body>
+</html>
